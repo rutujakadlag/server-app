@@ -1,0 +1,36 @@
+table, td, th {
+    border: 1px solid black;
+    margin: 5px
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  th span {
+    margin: 15px;
+  }
+
+  .serverIP{
+      margin: 10px 0;
+  }
+
+  .serverIP button {
+      margin: 0 5px;
+      cursor: pointer;
+  }
+
+  td {
+      text-align: center;
+  }
+
+  td span, td button {
+      margin: 10px;
+  }
+
+.heading{
+    background-color: black;
+    color: white;
+    font-size: larger;
+    padding: 10px;
+}

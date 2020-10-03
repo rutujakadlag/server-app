@@ -1,0 +1,29 @@
+<div class="heading">Welcome to server management!!!
+</div>
+
+<h3>Server List</h3>
+
+<table id="serverTable">
+    <tr>
+    <th>
+        <span>Server Group Name </span></th>
+    <th><span>Server Port</span></th>
+    <th><span>Servers</span></th>
+    </tr>
+    
+    <tr *ngFor="let serverGroup of serverGroups">
+    <td>{{serverGroup.groupname}}</td>
+    <td>{{serverGroup.serverport}}</td>
+    <td>
+        <ul class="serverIP" *ngFor="let server of serverGroup.servers">
+            <li><span>{{server.ip}}</span>
+            <button class='btn btn-success' (click)="printServerDetails(server)">Execute</button>
+        </li>
+        </ul>
+    </td>
+    </tr>
+</table>
+<br><br>
+<div *ngIf = "isServerSelected">
+<app-print-server-details></app-print-server-details>
+</div>
